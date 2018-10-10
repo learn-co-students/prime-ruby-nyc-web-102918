@@ -12,5 +12,3 @@ def prime?(num)
   end
   isP
 end
-
-prime?(3)
