@@ -1,1 +1,1 @@
-def prime?(num)		if num <= 1			return false		end	arr = [*1..num]	processed = []		arr.each do |i| 		processed.push(num % i)	end  if num.is_a? Integer    if num % 2 == 0 && num !=2      return false    elsif num % 3 == 0       return false    elsif num % 5 == 0        return false		else return true		endend
+def prime?(num)  if num < 0 or num == 0 or num == 1    return false  else    (2..num-1).to_a.all? do |possible_factor|      num % possible_factor != 0    end  endend
